@@ -27,12 +27,19 @@ class TicTacToe {
             System.out.println("-------------");
         }
     }
+    void placeMark(int row, int col, char mark){
+        board[row][col] = mark;
+    }
 }
 
 public class TicTacToeGame {
     public static void main(String[] args) {
         System.out.println("Welcome to the Game TicTacToe");
         TicTacToe obj = new TicTacToe();
+        obj.dispBoard();
+        obj.placeMark(0,0, 'X');
+        obj.dispBoard();
+        obj.placeMark(2,1, 'O');
         obj.dispBoard();
     }
 
